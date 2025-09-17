@@ -122,8 +122,7 @@ Logs rotate daily and are cleaned up after 7 days.
 
 ---
 
-## 📄 License & Contributing
-This project is licensed under the **MIT License**.  
+## 📄 Contributing
 
 Contributions are welcome—open an issue or PR if you’d like to improve it.  
 
