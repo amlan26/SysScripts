@@ -1,0 +1,23 @@
+[Unit]
+Description=Server Monitoring Script
+After=network.target
+
+[Service]
+# Path to your Python venv and script
+ExecStart=/opt/venv/bin/python /opt/server-monitor-logs/server_monitor.py
+WorkingDirectory=/opt/server-monitor-logs
+
+# Run as ubuntu user (adjust if needed)
+User=ubuntu
+Group=ubuntu
+
+# Restart if the script crashes
+Restart=always
+RestartSec=5
+
+# Logging
+StandardOutput=append:/opt/server-monitor-logs/service.log
+StandardError=append:/opt/server-monitor-logs/service_error.log
+
+[Install]
+WantedBy=multi-user.target
